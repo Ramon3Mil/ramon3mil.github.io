@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Circulo </h1>
+    <img src="https://i.pinimg.com/736x/f7/90/09/f79009bd958d51189163936372d925e7.jpg">
+    <p>Un círculo es una figura muy especial. Veamos porqué. La línea curva que conforma el contorno de un círculo es una CIRCUNFERENCIA, que es una línea curva cerrada en la que todos sus puntos están a la misma distancia de su centro.</p>
+    <p><a class="btn btn-primary btn-lg" href="figuras.html" role="button">Atras</a></p>
+ </div>
+ 
+ <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Radio</span>
+            <input id="radio" type="text" class="form-control" placeholder="Escribe un radio ejemplo: 10" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+  <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">Calcular</button>
+  <h2 id="area">Area:</h2>
+          <h2 id="perimetro">Perimetro:</h2>
+  <h2 id="diametro">Diametro:</h2>
+</div>
+    <script >
+        function calcular() {
+            var radio = parseFloat(document.getElementById("radio").value);
+            var h2area = document.getElementById("area");
+            var h2perimetro = document.getElementById("perimetro");
+            var h2diametro = document.getElementById("diametro");
+            var diametro = 2*radio;
+            var perimetro = diametro*Math.PI;
+            var area = Math.PI*radio*radio;
+            h2area.innerText = "Area: "+area;
+            h2perimetro.innerText = "Perimetro: "+perimetro;
+            h2diametro.innerText = "Diametro: "+diametro;
+        }
+    </script>
+</body>
+</html>

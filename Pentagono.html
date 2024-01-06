@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Pentagono </h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT00QopAC3wwSzIWmMirFl3D0VcpycnSayxUw&usqp=CAU">
+    <p>En geometría, se denomina pentágono a un polígono de cinco lados y cinco vértices. La suma de los ángulos internos de un simple pentágono es 540°. Un pentágono puede ser simple o auto-intersecantes. Un pentágono regular auto-intersecante se llama Estrella pentagonal.</p>
+    <p><a class="btn btn-primary btn-lg" href="figuras.html" role="button">Atras</a></p>
+ </div>
+
+ <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Lado</span>
+            <input id="lado" type="text" class="form-control" placeholder="Escribe un lado ejemplo: 10" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Apotema</span>
+            <input id="apotema" type="text" class="form-control" placeholder="Escribe un apotema ejemplo: 5" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">Calcular</button>
+          <h2 id="area">Area:</h2>
+          <h2 id="perimetro">Perimetro:</h2>
+    </div>
+    <script >
+        function calcular() {
+            var lado = parseFloat(document.getElementById("lado").value);
+            var apotema = parseFloat(document.getElementById("apotema").value);
+            var h2area = document.getElementById("area");
+            var h2perimetro = document.getElementById("perimetro");
+            var perimetro = lado * 5;
+            var area = (perimetro*apotema)/2
+            h2area.innerText = "Area: "+area;
+            h2perimetro.innerText = "Perimetro: "+perimetro;
+        }
+    </script>
+</body>
+</html>
